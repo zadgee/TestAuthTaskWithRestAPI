@@ -1,0 +1,109 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="screens.authscreen.AuthFragment"
+    android:background="@drawable/appinit"
+    >
+
+
+    <TextView
+        android:id="@+id/some_id"
+        android:layout_width="91dp"
+        android:layout_height="52dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="128dp"
+        android:fontFamily="@font/boldtextstyle"
+        android:gravity="center_horizontal|top"
+        android:text="Вхід"
+        android:textAppearance="@style/some_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="319dp"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="140dp"
+        android:background="@color/green"
+        android:text="Логін"
+        android:textStyle="italic"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:fontFamily="@font/boldtextstyle"
+        android:textSize="15dp"
+        android:layout_width="323dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="320dp"
+        android:id="@+id/phoneedtext"
+        android:hint="Телефон"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.39"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/passwordedtext"
+        android:layout_width="323dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="248dp"
+        android:fontFamily="@font/boldtextstyle"
+        android:hint="Пароль"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.405"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="139dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="208dp"
+        android:fontFamily="@font/boldtextstyle"
+        android:text="Забули пароль?"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.927"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:visibility="invisible"
+        android:fontFamily="@font/boldtextstyle"
+       android:id="@+id/versionistooold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:text="Ця версія застаріла"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/updateapp"
+        android:layout_width="192dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="@font/boldtextstyle"
+        android:text="Оновіть додаток зараз! Доступна новіша версія додатка"
+        android:textColor="@color/green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

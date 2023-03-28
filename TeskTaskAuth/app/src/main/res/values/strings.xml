@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">TeskTaskAuth</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="some_id">
+\u00D0\u0092\u00D1\u0085\u00D1\u0096\u00D0\u00B4
+</string>
+    <string name="authapp">authapp</string>
+
+    <style name="some_id">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:shadowColor">#40000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">4</item>
+        <item name="android:shadowRadius">4</item>
+    </style>
+</resources>
