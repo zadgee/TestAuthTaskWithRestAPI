@@ -14,6 +14,7 @@ import android.view.View
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import com.example.tesktaskauth.R
@@ -26,24 +27,20 @@ import splashscree.SplashViewModel
 @AndroidEntryPoint
 class SplashFragment : Fragment() {
     lateinit var binding: FragmentSplashBinding
-private val viewmodel by viewModels<SplashViewModel>()
+    private val viewmodel by viewModels<SplashViewModel>()
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-binding = FragmentSplashBinding.inflate(inflater)
+        binding = FragmentSplashBinding.inflate(inflater)
         return binding.root
 
     }
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // if Internet is not working == splash screen without logo
@@ -70,6 +67,7 @@ binding = FragmentSplashBinding.inflate(inflater)
 
     }
 
+    @RequiresApi(Build.VERSION_CODES.M)
     private fun isDeviceOnline(context: Context): Boolean {
         val connManager = context.getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
