@@ -16,21 +16,22 @@ class CatalogRecView@Inject constructor(private val context:Context):RecyclerVie
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CatalogViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.brands_items_layout,parent,false)
-       return CatalogViewHolder(view)
+        return CatalogViewHolder(view)
     }
 
     override fun getItemCount(): Int {
-      return listwithbrands.size
+        return listwithbrands.size
     }
 
     override fun onBindViewHolder(holder: CatalogViewHolder, position: Int) {
         Glide.with(context).load(listwithbrands[position].apple.image).into(holder.itemView.findViewById(R.id.imagebrand))
         Glide.with(context).load(listwithbrands[position].samsung.image).into(holder.itemView.findViewById(R.id.samsungimage))
-        Glide.with(context).load(listwithbrands[position].xiaomi.image).into(holder.itemView.findViewById(R.id.xiaomiimage))
+        holder.itemView.findViewById<TextView>(R.id.appletext).text = listwithbrands[position].apple.name
+        holder.itemView.findViewById<TextView>(R.id.samsungtext).text = listwithbrands[position].samsung.name
     }
 
-fun createbrandslist(list: List<BrandItems>){
-    listwithbrands.addAll(list)
-    notifyDataSetChanged()
-}
+    fun createbrandslist(list: List<BrandItems>){
+        listwithbrands.addAll(list)
+        notifyDataSetChanged()
+    }
 }

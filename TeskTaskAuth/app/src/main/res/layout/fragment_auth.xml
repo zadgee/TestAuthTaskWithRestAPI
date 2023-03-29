@@ -42,6 +42,10 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
+        android:inputType="number"
+        android:imeActionLabel="Next"
+        android:imeOptions="actionNext"
+        android:focusableInTouchMode="true"
         android:fontFamily="@font/boldtextstyle"
         android:textSize="15dp"
         android:layout_width="323dp"
@@ -55,6 +59,10 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
+        android:inputType="number"
+        android:imeActionLabel="OK"
+        android:imeOptions="actionDone"
+        android:focusableInTouchMode="true"
         android:id="@+id/passwordedtext"
         android:layout_width="323dp"
         android:layout_height="42dp"
@@ -82,7 +90,7 @@
     <TextView
         android:visibility="invisible"
         android:fontFamily="@font/boldtextstyle"
-       android:id="@+id/versionistooold"
+        android:id="@+id/versionistooold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"

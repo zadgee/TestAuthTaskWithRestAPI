@@ -10,9 +10,7 @@ data class BrandItems(
     @SerializedName("7")
     val apple:BrandsDetails,
     @SerializedName("47")
-    val samsung:BrandsDetails,
-    @SerializedName("57")
-    val xiaomi:BrandsDetails
+    val samsung:BrandsDetails
 )
 
 data class BrandsDetails(
