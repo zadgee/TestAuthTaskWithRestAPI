@@ -8,20 +8,21 @@ import android.net.NetworkInfo
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.Navigation
+import androidx.navigation.NavDirections
+import androidx.navigation.fragment.findNavController
 import com.example.tesktaskauth.R
 import com.example.tesktaskauth.databinding.FragmentSplashBinding
 import dagger.hilt.android.AndroidEntryPoint
 import splashscree.SplashViewModel
-
+import splashscreen.safenavigation.safeNavigate
 
 
 @AndroidEntryPoint
@@ -53,7 +54,8 @@ class SplashFragment : Fragment() {
                     resp->
                 if(resp.isSuccessful){
                     binding.internetLayout.visibility = VISIBLE
-                    Navigation.findNavController(view).navigate(R.id.action_splashFragment_to_authFragment)
+                    findNavController().navigate(R.id.action_splashFragment_to_authFragment)
+
                 } else{
                     isDeviceOnline(requireContext())
                     resp.errorBody()?.string()
@@ -112,4 +114,5 @@ class SplashFragment : Fragment() {
             }
         }
     }
+
 }
